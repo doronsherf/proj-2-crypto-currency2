@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta name="author" content="DORON S">
+    <meta name="keywords" content="...">
+    <title> Crypto Analyze  </title>
+    <meta name="subtitle" content=" Exchange Rates | realtime API updates ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+       
+      <!-- SCRIPTS (jQuery ) --> 
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+      <!-- *********BOOTSTRP BLOCK****************************************************************** -->
+        <!-- BOOTSTRP: link and scripts to enable bootstrap glyphicons  -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <!-- Include all compiled plugins (below) -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- Bootstrap Toggle/swich CDN-->
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+        <!-- BOOTSTRP links to styles and to script (javascript plugins) -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- ********BOOTSTRP BLOCK END *************************************************************** -->
+
+
+        
+        <!-- *********  AWESOMPLETE - autocomplete widget ****************** -->
+        <link rel="stylesheet" type="text/css"  href="./css/awesomplete.css"/> <!-- css-->
+        <!--<link rel="stylesheet" type="text/css" href="./css/awesomplete.css" />   -->
+        <!--<link rel="stylesheet" type="text/css" href="./css/awesomplete.css" />   -->
+        <script src="./script/awesomplete.js"></script> 
+        <!--<script src="./awesomplete-gh-pages/awesomplete.js" async></script> -->
+
+        <!--  AXIOS:  external module of CryptoCompare.com API  -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+		<!--  Plotly: Open Source Charts and Graphing Library -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<!--  CanvasJS: Open Source Charts for JQueryLibrary -->
+        <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+
+        <!-- *** TINGLE - Modal plugin written in pure JavaScript *********** -->
+        <link rel="stylesheet" href="tingle_modal/tingle.css" media="all">
+        <script src="tingle_modal/tingle.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        
+    <!-- <link rel="stylesheet" href="./tingle_modal/tingle.min.css">
+        <script src="./tingle_modal/tingle.min.js"></script> 
+    -->
+       <!-- *** PACE  Automatic page load progress bar v1.0.2 *********** -->
+        <link rel="stylesheet" type="text/css"  href="./css/pace1.css"/> -->
+        <script src="./script/pace.js"></script>
+   <!--
+        <link href="/pace/themes/pace-theme-barber-shop.css" rel="stylesheet" />
+        <script src="/pace/pace.js"></script>
+    -->
+
+
+          <!-- ********* Style ****************** -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- JQuery CDN from google site -->
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Erica+One|Kite+One|Sofadi+One" rel="stylesheet"> <!-- a googlelips fonts (3 packages) -->
+        
+        <link rel="stylesheet" type="text/css"  href="./css/styl_final.css"/>
+
+
+        
+  </head>
+
+  <body> 
+
+        <!-- <img src="../images/getpic.jpg" alt="" class="Bg_pic" /> -->
+
+<!-- <div  id="main_heder" class="fixed-top jumbotron-fluid">
+    <div id="main_titl" class="fixed-top jumbotron-fluid"> Crypto Currencies</div>  -->
+<div  id="main_heder" >
+    <div id="main_titl"> Crypto Analyze</div> 
+    
+    <!-- <div id="main_btns" class="fixed-top jumbotron-fluid "> -->
+    <div id="main_btns" >
+        <button class="push_btn" id="coins_btn">Currencies</button>
+        <button class="push_btn" id="reprts_btn"  >Reports</button>
+        <button class="push_btn" id="abot_btn"  >About</button>
+        <input autofocus class="serch_combind_inpt  awesomplete" id="serch_inpt" type="Text" placeholder="Coin Symbol" ><button class="serch_combind_btn" id="serch_btn" >Search</button>
+    </div >
+</div>
+
+<div id="reprts_div">
+    <div id="side_div1"> </div>
+
+    <div id=big_charts_div> 
+        <div id="chart_div1"><!-- REAL TIME LIVE chart is drawn inside this DIV --></div>
+        <p style="margin:0; padding:0"></p>
+        <div id="chart_div2"><!-- PLOTLY HISTOTY chart is drawn inside this DIV --></div>
+    </div>
+
+    <div id="side_div2"  class="acordion" > </div>
+</div>
+
+<div id="coins_div">
+
+    <!-- Trigger the modal with a function -->
+<!-- ************************ MODAL HTML ************************************************************ -->
+    <div class="tingle-content-wrapper">
+        <div class="container content">
+            <div id="modal_popup_box" class="tingle-demo tingle-demo-force-close"></div>
+        </div> 
+    </div> 
+    <script src="tingle_modal/tingle.js"></script>
+ <!-- ************************ END MODAL HTML ************************************************************* -->
+   
+</div>
+
+<div id="about_div">
+    <h2> About Me</h2>
+
+<img src="./images/doron2.png" alt="Avatar" style="width:200px" class="avatar">
+
+    <h3>Doron Sherf</h3>
+    <p>
+        I am an independent consultant for the health care system of Israel. 
+        I lead Israel health system to integrate advanced technologies to push for further advance of the public and community health systems. 
+        also, I am an expert in establishing, financing and forwarding innovative technologies companies. From the early stages to acquire funds, manage successful R&D and mature to a high value companies. 
+        Throughout my career I was involved in establishing and fund raising of dozens of startup companies in various industries.
+    </p>
+
+    <h3>Crypto Analyze</h3>
+    <p>
+        This site present more than 4400 crypto currencies current values, and value changes in the last month (30d) and the last day (24h). 
+        Crypto Analyze present live streaming prices.
+        Crypto Analyze let you view and analyze over 1600 crypto currencies. 
+        Crypto Analyze enable you to choose few coins to analyze comparatively their historical data. 
+    </p>
+    
+    <h3>Sources </h3>
+    <p>
+        Crypto Analyze retrieve data from 2 leading API data sources:
+    </p>
+    <p style="font-weight: 0">
+        Powered by CoinGecko API
+        <a href="https://www.coingecko.com" >
+        <img border="0" src="./images/CoinGecko API - logo.PNG" alt="https://www.coingecko.com" width="60" height="20"> </a>
+    </p>
+    <p style="font-weight: 0">
+            Powered by cryptocompare API
+        <a href="https://www.cryptocompare.com">
+        <img border="0" src="./images/cryptocomp.png" alt="cryptocompare link" width="60" height="40"> </a>
+    </p>
+    </div>
+
+  </body>
+  <script src="./script/script_final.js"></script> 
+</html>

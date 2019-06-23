@@ -1,0 +1,682 @@
+/* --------------------------------------------------------
+Style Sheet 
+project: Generate Random Users
+
+version: 1.0
+last modified: 
+author: Doron 
+email: sherfdo@gmail.com
+website: http://
+----------------------------------------------------------*/
+/*
+SlateGray  DimGray  LightGrey	Silver	
+*/
+
+/*** Animations ***/
+    .fly_in { 
+        animation: fly_in 2s;
+        transform-style: preserve-3d;
+    }
+    @keyframes fly_in {
+        0%  {
+            position:relative; 
+            left: -800px ;
+            opacity: 0.5;
+            transform: rotateY(0deg);
+            } 
+        100%{ 
+            position:relative; 
+            left: 0px ;
+            opacity: 1; 
+            transform: rotateY(-360deg);     
+            }
+    }
+
+
+/*** glyphicon ***/
+    .glyphicon {
+        font-size: 30px;
+        color: rgba(250, 250, 250, 0.95);
+    }
+
+body {
+    min-width:200px;
+    font-family:  'ArchivoNarrow'; /* a googlelips font */ 
+    text-align: center;
+    background-image: url("../images/bcg.jpg") ;  
+    background-repeat: repeat;
+    background-size: 600px 400px; 
+}
+#main_heder{
+    position: fixed;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 90px;
+    width: 100%;
+    z-index: +1;
+    margin: 0px;
+    padding: 0px;
+    background-image: 
+    linear-gradient(
+        rgba(96, 121, 235, 0.9), rgba(7, 11, 54, 0.9) ),
+        url("../images/bcg.jpg") ;
+
+    z-index: +2;
+    }
+
+#main_titl {
+    position: absolute;
+    top: 0px;
+    padding-top: 8px;
+    height: 40px; 
+    width: 100%;
+    margin: 0px;
+    font: 24px/48px "Titan One";
+    color:white; 
+
+} 
+#main_btns {
+    position: absolute;
+    bottom: 5px;
+    padding-top: 2px;
+    height: 40px; 
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-self: center;
+    align-content: center;
+    align-items: center; 
+}  
+
+
+/*** Responsiv Factors ***/
+@media (max-width: 424px) {
+    #main_heder{
+        height: 160px;
+    }
+    .main_titl {
+        font: 24px/48px "Titan One";
+        text-align: center;
+    }
+    #main_btns {
+        /* display: block;*/
+         flex-direction: row;
+         flex-wrap: wrap; 
+         height: 80px;
+    }
+    #main_btns > button , input {
+        width:30%;
+        height: 36px;
+        flex-direction: row;
+        flex-wrap: wrap; 
+    }
+}
+@media (max-width: 212px) {
+    #main_heder{
+        height: 160px;
+    }
+    #main_titl {
+        height: 0;
+        font: 12px/24px "Titan One";
+        text-align: center;
+    }
+    #main_btns {
+        /* display: block;*/
+         flex-direction: column;
+         flex-wrap: wrap; 
+         height: 160px;
+          
+     }
+     #main_btns > button , input {
+        /* display: block;*/
+        width:100%;
+        height: 34px;
+        flex-direction: column;
+         flex-wrap: wrap; 
+         width:100%;
+     }
+}
+
+#coins_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:center;
+    position: relative;
+    top: 4px;
+}
+#coins_div > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:center;
+    position: relative;
+    top: 4px;
+}
+
+/* *** *** modal *** *** */
+.modal-dialog {
+    width: 100px  !important;
+}
+.tingle-content-wrapper{
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.modal_contnt_clas{
+    /* list-style-type:decimal ; */
+    color:orangered; 
+}
+
+.modal_titl{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.modal_sub_titl{
+    font-size: 11px;
+    text-align: center;
+}
+
+.modal_coin_clas{
+    font-size: 18px;
+}
+.modal_coin_clas span {
+    position:relative;
+
+}
+
+#reprts_div {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content:space-between;
+    top: 90px; 
+    width: 100%; 
+    height:100%; 
+    /* background-color: lightgreen; */
+}
+
+#side_div1 {
+    position: relative; 
+    flex: 0 0 200px; /* constant width 200px */
+    flex-direction: column; 
+    flex-wrap: nowrap; 
+    align-items:flex-start;
+    /* align-items:center; */
+    margin: 4px;
+    height:95%;
+    background-color: rgba(112, 128, 144, 0.3) ;
+}
+
+#side_div1 > div{
+    margin: 4px;
+    background-color:rgb(135, 206, 235, 0.9);
+}
+
+#big_charts_div {
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    position: relative; 
+    width: 70%; 
+     height:95%; 
+    /* height:500px; */
+}
+#chart_div1 { 
+    width: 100%; 
+   height:250px;
+    margin: 2px;   
+}
+#chart_div2 {
+    top: 120px;
+    width: 100%; 
+    height:70%;
+    margin: 1px;   
+}
+
+#side_div2 {
+    position: relative; 
+    flex: 0 0 200px; /* constant width 200px */
+    flex-direction: column; 
+    flex-wrap: nowrap; 
+    align-items:flex-start;
+    margin: 4px;
+    height:95%;
+    background-color: rgb(16, 211, 245, 0.3);
+}
+#side_div1 > div{
+    margin: 4px;
+    background-color: rgb(255, 192, 203, 0.9);
+}
+#side_div2 > div{
+    margin: 4px;
+    background-color: rgb(255, 127, 80 , 0.9);
+}
+/* responsiv buttons */  
+.push_btn  {
+    flex: 1 0 40px;
+    height:30px;
+    border-radius: 15px;
+    margin: 0 20px 0 20px;
+    background-color: DimGray; 
+    box-shadow: 0 6px rgb(30, 30, 30);
+    padding:0px ; 
+    border: 0;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    font-family:  Arial ; 
+    font-size: 14px;
+}    
+
+.push_btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 4px rgb(30, 30, 30);
+}    
+
+.push_btn:active {
+    transform: translateY(5px);
+    box-shadow: 0 1px rgb(30, 30, 30);
+}
+
+.serch_combind_inpt  {
+    flex: 1 0 80px;
+    /* width:90px; */
+    height:30px;
+    border: DimGray; /* rgb(100, 100, 100) */
+    border-style: solid;
+    border-width: 2px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-right-width: 0px;
+    padding-right: 0;
+    margin-right: 0;
+    cursor: text ;
+    box-shadow: 0 6px rgb(30, 30, 30);
+    color: black;
+}
+
+.serch_combind_btn   {
+    flex: 1 0 40px;
+    /* width:50px; */
+    height:30px;
+    border: DimGray; /* rgb(100, 100, 100) */; 
+    border-style: solid;
+    border-width: 2px;
+    
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-left-width: 0px;
+    padding-left: 0;
+    margin-left: 0;
+    background-color: DimGray ;
+    
+
+    cursor: pointer ;
+    box-shadow: 0 6px rgb(30, 30, 30);
+
+}
+.serch_combind_btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 4px rgb(30, 30, 30);
+    cursor: pointer;
+}    
+
+.serch_combind_btn:active {
+    transform: translateY(5px);
+    box-shadow: 0 1px rgb(30, 30, 30);
+}
+
+
+/**************** card styles ************* ************* ************* */
+.well{ /* bootstrap class*/
+    border-width: 0px; 
+    background-color: rgba(8, 64, 153, 0.05)
+    
+} 
+
+.card_tmplt { 
+    top: 4px;
+    left: 4px; 
+    width: 200px; 
+    height: 120px;
+    border-width: 0px; 
+    margin: 3px;
+    padding:0px ;
+    word-break: break-all; 
+    font-family: Arial Narrow;
+    text-align: left;
+}
+
+.card_chosed  { /* class of card that was chosen to be included in "reports" */
+    background-color:rgb(50, 78, 205 , 0.05) ;
+    border: 3px solid rgb(0, 72, 100, 0.05) ;
+}
+
+.no_show {
+    display: none;
+}
+#card_contnr{ 
+    position: relative; 
+}
+#card { 
+    position: relative;  
+    top: -4px;
+    left: 0px;
+
+    /* background:rgb(110, 173, 246, 0.95); 
+    border: 0px solid rgb(110, 173, 246, 1.0); */
+    color: black;
+    background: linear-gradient( rgb(56, 87, 230), rgba(7, 11, 54, 1) );
+    border: 0px solid rgb(10, 10, 75);
+}
+#genrl_card { 
+    background: rgba(67, 13, 216); 
+    border: 0px solid rgb(3, 2, 78 );
+    color: black;
+     position: relative;  
+      top: -3px;
+      left: 3px;
+      z-index: +1;
+}
+#recnt_card{ 
+    background:rgba(7, 36, 66, 0.95); 
+    border: 0px solid rgb(2, 66, 39 , 0.95); 
+    color: black;
+    position: relative;  
+      top: -3px;
+      left: 0px;
+}
+
+#card_id{
+    display: none;
+}
+
+
+/* card symbol style */
+#card_txt_symbl {
+    position: absolute;  
+    top: 0px;
+    left: 4px; 
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Arial Narrow;
+    color: Tomato;
+    margin: 0px;
+    border-width: 0px;
+}
+
+/* card name style */
+#card_name {
+    position: absolute;  
+    top: 32px;
+    left: 4px;
+    font-family: Arial Narrow;
+    font-size: 20px;
+    font-weight: bold ;
+}
+
+/**************** mor_info btn *************************/
+.smal_push_btn  {
+    position: absolute;  
+    bottom: 8px;
+/*   left: 0;  */
+    height:15%;
+    width:48%;
+    border-radius: 8px;
+    margin: 0 2px 0 2px;
+    background-color: DimGray;
+    box-shadow: 0 6px rgb(30, 30, 30);
+    padding:0px ; 
+    border: 0;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    font-family:  Arial ; 
+    font-size: 12px;
+    opacity: 1 ;
+    background-color: SaddleBrown; 
+
+}
+.smal_push_btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px rgb(30, 30, 30);
+}    
+
+.smal_push_btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px rgb(30, 30, 30);
+}    
+
+
+/**************** toggle-swich (includ in 'reports') btn ******************/
+
+/* The switch - the box around the slider */
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 14px;
+    border: 0;
+    border-radius: 7px;
+
+}
+
+/* Hide default HTML checkbox */
+/* no efect*/
+/* label.switch > input[type="checkbox"] {opacity: 0;}
+*/
+.switch_input > input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.switch_input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+  }
+
+
+  button#togl_btn {
+    opacity: 1;
+    width: 0;
+    height: 0;
+}
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 14px;
+    top: 10%;
+    right: 5%;
+    background-color:#df850f; 
+
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 11px;
+    width: 11px;
+    right: 18px;
+    top: 10%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+
+input:checked + .slider {
+    background-color: green;
+  }
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.slider { /* slider is slider the frame */
+    border-radius: 7px;
+}
+
+.slider:before { /* slider:before is the slider 'circle' */
+    border-radius: 50%;
+}
+
+
+/**************** STAMP (on 'card') ******************/
+
+.stamping { 
+    opacity: 1;
+   }
+.fade_out { 
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 4s, opacity 4s linear;
+    }
+    
+ #stamp {
+    position: absolute;
+    transform: rotate(-20deg);
+    width: 33%;
+    height: 20%;
+    color: Red;
+    top: 40%;
+    right: 15%;
+    background-color: DarkOrange; /* #df850f*/
+    text-align: center;
+    font-family: ArchivoNarrow;
+    font-size: 12px;
+    font-weight: bolder;
+    border-color:Crimson;
+    border-width: 3px;
+    border-radius: 5%;
+    line-height: 100%;
+    
+ }
+
+.avatar {
+    display: block;
+    border-radius: 50%;
+    width:10px;
+    height: 200px;
+  }
+
+#about_div {
+    position: absolute;
+    top: 0px; 
+    display:flex;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    width: 95%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+    background-color: rgba(201, 87, 230, 0.8); 
+    transform: scale(0.7); 
+  }
+  #about_div > p { 
+    background-color: rgb(95, 79, 235, 0.9); 
+    text-align: center; 
+    margin: 2px;
+  }
+  #about_div > h3 { 
+    margin-bottom: 2px;
+  }
+/* ================================================================ */
+
+
+/* ********* ACCORDION (in side_div2 in 'Reports' mode) ***********  */
+
+.acordion {
+  padding:0;
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:top;
+  flex-direction:column;
+  font-size:14px;
+  font-family:'Montserrat', sans-serif;
+}
+
+.unit {
+  width:200px;
+  padding:0;
+  color:white;
+  text-align:center;
+}
+
+.unit p{
+  text-align:left;
+  font-size: 12px;
+  margin:0;
+  padding:5px;
+  /* background: linear-gradient( rgb(0, 10, 153) , rgb(147, 148, 224) ); */
+  background: linear-gradient( rgb(255, 127, 80) , rgb(147, 148, 224) ); 
+  color:black;
+  display:none; 
+  /* display:block; */
+  border-radius:  0 0 5px 5px;
+
+}
+
+.unit h5{
+  width:200px;
+  position:relative;
+  padding:20px;
+  margin:0;
+  background: linear-gradient( rgba(7, 11, 54, 1) , rgb(94, 228, 255) );
+  border-radius: 5px;
+}
+
+.unit:hover{
+  cursor:pointer;
+}
+
+.unit.open h5{
+  background:rgb(0, 2, 102);
+  color:white;
+  border-radius: 5px 5px 0 0;
+}
+
+.unit h5::after{
+  content:" >";
+  color:white;
+  float:right;
+  font-size:22px;
+  transform:rotate(90deg);
+  transition:transform ease-in-out 0.2s;
+}
+
+.unit.open h5::after{
+  transform:rotate(270deg);
+}
+
+.unit.open p{
+  display:block;
+}
+/* <!-- **************** ACCORDION CSS ************************ --> */
